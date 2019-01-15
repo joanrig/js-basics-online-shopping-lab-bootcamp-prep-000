@@ -63,9 +63,8 @@ function removeFromCart(item) {
 
 
 function placeOrder(cardNumber) {
-
-  cart.slice(0,cart.length);
-  
+  totalDue = total()
+  cart = []
   if (cardNumber) {
     return `Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`
   } else {
